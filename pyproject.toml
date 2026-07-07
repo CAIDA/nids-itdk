@@ -1,0 +1,15 @@
+[project]
+name = "nids-itdk"
+version = "0.1.0"
+description = "CAIDA NIDS ITDK teaching module"
+requires-python = ">=3.9"
+dependencies = [
+    "jupyterlab",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "pandas",
+    "matplotlib",
+    "pycountry",
+    "python-dotenv",
+    "scipy",
+]

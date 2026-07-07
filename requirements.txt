@@ -1,0 +1,8 @@
+jupyterlab
+sqlalchemy
+psycopg2-binary
+pandas
+matplotlib
+pycountry
+python-dotenv
+scipy
