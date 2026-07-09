@@ -1,4 +1,4 @@
-README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 # Exploring Internet Topology with CAIDA's ITDK
 
@@ -76,4 +76,4 @@ nids-itdk
 - **CDN (Content Delivery Network)**: A network of servers distributed geographically to serve content closer to end users; examples include Akamai, Cloudflare, and Edgecast.
 - **Placeholder Node**: An ITDK node representing a router that did not respond to traceroute probes but whose existence was inferred from surrounding hops. Placeholder nodes have synthetic IP addresses in reserved ranges and carry no geolocation, AS, or hostname data.
 
-README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)

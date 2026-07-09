@@ -1,4 +1,4 @@
-[README](README.md) | Introduction ⮕ | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | Introduction ⮕ | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 ## What Is the Internet Topology Data Kit?
 
@@ -79,4 +79,4 @@ Task 1 exercises this directly: a handful of Level3–Netflix links come out non
 - [CAIDA ITDK Dataset](https://www.caida.org/catalog/datasets/internet-topology-data-kit/) — full dataset description, data formats, and download links
 - [Hoiho: Alias Resolution and Geolocation](https://www.caida.org/publications/papers/2021/hoiho/) — the paper describing the hostname-based geolocation and alias resolution methodology
 
-[README](README.md) | Introduction ⮕ | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | Introduction ⮕ | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)

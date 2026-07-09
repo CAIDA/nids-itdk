@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)
 
 # Task 3: Multi-AS Interconnection Analysis — How-To Guide
 
@@ -43,9 +43,48 @@ The default single solver run (barycenter start) can land in a mediocre local op
 
 Because the QAP reordering breaks the category grouping (a Tier-1 transit AS can end up next to a CDN if the two are heavily linked), the heatmap adds a one-letter `Code` strip (T/L/D/C, from the table above) along the top axis so each column's category is still identifiable after reordering.
 
+## Counting Links Between Every AS Pair
+
+The count of router-level links for each pair of the 18 ASes comes from one
+query. The trap is fan-out: `itdk_link_endpoints` has many rows per link and
+`itdk_node_as` many rows per node, so joining them directly explodes the row
+count. Instead, first collapse to the grain you need — one `(link_id, asn)` per
+endpoint — in a [CTE](SQL.md#34-staging-a-query-with-a-cte-with), then self-join
+that small result. This is the complete query used in the notebook (it returns
+`pair_df`):
+
+```sql
+WITH le_as AS (
+    -- Collapse to one row per (link, AS): which of the 18 ASes touches each
+    -- link. DISTINCT removes the duplicates created by multiple endpoints/ASNs.
+    SELECT DISTINCT le.link_id, na.asn
+    FROM caida_itdk.itdk_link_endpoints le
+    JOIN caida_itdk.itdk_node_as na ON na.node_id = le.node_id
+    WHERE na.asn IN (/* asn_list */)     -- the 18 ASNs, interpolated from Python
+)
+-- Self-join on link_id: a link joining AS `a` and AS `b` appears once in each.
+-- `a.asn < b.asn` keeps only one direction, so each unordered pair is counted
+-- once (not twice). COUNT(*) is already a distinct-link count thanks to the CTE.
+SELECT a.asn AS asn1, b.asn AS asn2, COUNT(*) AS link_count
+FROM le_as a
+JOIN le_as b ON b.link_id = a.link_id AND a.asn < b.asn
+GROUP BY a.asn, b.asn
+ORDER BY link_count DESC;
+```
+
+The ASN list is interpolated from Python with an f-string — see
+[SQL §3.6](SQL.md#36-interpolating-a-python-list-into-an-in-clause):
+
+```python
+asn_sql = ", ".join(str(a) for a in asn_list)   # "174, 701, 1299, ..."
+pair_df = pd.read_sql(f"""... WHERE na.asn IN ({asn_sql}) ...""", engine)
+pair_df["name1"] = pair_df["asn1"].map(ASES)     # label ASNs with names
+pair_df["name2"] = pair_df["asn2"].map(ASES)
+```
+
 ## Building the Symmetric Matrix
 
-The query counts distinct `link_id` values for each AS pair (with `asn1 < asn2` to avoid double-counting). After running the query, build a symmetric matrix — indexed by the QAP order, not the table order — and mask zeros so the heatmap shows only pairs with at least one observed link:
+The query above counts distinct `link_id` values for each AS pair (with `asn1 < asn2` to avoid double-counting). After running the query, build a symmetric matrix — indexed by the QAP order, not the table order — and mask zeros so the heatmap shows only pairs with at least one observed link:
 
 ```python
 matrix = pd.DataFrame(0, index=qap_names, columns=qap_names)
@@ -74,4 +113,4 @@ Question 3 asks for **two paragraphs** interpreting the heatmap. Use the QAP ord
 
 Ground each claim in what the heatmap actually shows for your run, not in these prompts.
 
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)

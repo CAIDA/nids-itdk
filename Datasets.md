@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | Datasets ⮕ | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | Datasets ⮕ | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 ## Database
 
@@ -146,4 +146,4 @@ The right approach depends on your goal:
 - **Count only the first placeholder**: count a single placeholder node per gap, since we know there must be at least one.
 - **Only use transit nodes**: this counts only IP addresses that we observe transiting traffic, i.e., we have observed at least one IP address after the hop. In `A-B-C`, C is not a router. These transit nodes are exposed as the interfaces-restricted-to-transit-observed-nodes view. You have a smaller part of the topology, but each node is a known router.
 
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | Datasets ⮕ | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | Datasets ⮕ | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
