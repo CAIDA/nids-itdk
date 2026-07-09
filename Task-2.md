@@ -129,7 +129,7 @@ Use a lookup (e.g. a small hardcoded ASN → name dict, or an external ASN name 
 
 Ground each answer in what your own queries actually return, not in the illustrative examples above:
 
-- **Q2.a** — How does the country-level concentration of China Unicom's routers compare with Level3's? What does each network's business model (national domestic carrier vs. Tier-1 backbone) suggest about why their footprints would differ?
+- **Q2.a** — How does the country-level concentration of China Unicom's routers compare with Level3's? What does each network's business model (national ISP vs. global transit ISP) suggest about why their footprints would differ?
 - **Q2.b** — Which ASN has more total geolocated routers, and why might that follow from the two networks' different roles and scale?
 - **Q2.c** — Build the top-10 West Coast cities × peer-ASN table (see *Top West Coast Cities by Peer AS* above): for each city, the total number of distinct China Unicom routers with at least one peer, broken down by peer ASN. Label peer ASNs by network name rather than bare numbers, and note how many columns (if any) you collapsed for readability.
 - **Q2.d** — Looking at your West Coast city/peer-ASN table: why would China Unicom connect to the *same* peer AS more than once *at the same location*? Why would it connect to the same peer AS at *different* locations? Consider what a single router-level link represents versus what a citywide or national interconnection relationship represents.

@@ -29,7 +29,7 @@ Complete the tasks below in order. All three tasks are completed inside [nids-it
 
 ## Task 1: Border Routers Between Level3 (AS3356) and Netflix (AS2906)
 
-Query the ITDK for all router-level links between Level3, a Tier-1 transit provider, and Netflix, a major content provider. Use geolocation to measure the distance between link endpoints, classify links as geographically adjacent (≤ 40 km) or not, and identify the distinct cities where the two networks peer.
+Query the ITDK for all router-level links between Level3, an ISP, and Netflix, a major content provider. Use geolocation to measure the distance between link endpoints, classify links as geographically adjacent (≤ 40 km) or not, and identify the distinct cities where the two networks peer.
 
 - [ ] Q1.a: How many router-level links between Level3 and Netflix are geographically adjacent (within 40 km)? How many are not? Report the link IDs of the non-adjacent links.
 - [ ] Q1.b: Excluding non-adjacent links, how many distinct locations did Level3 and Netflix appear to peer? Produce a table with the inferred locations and the number of links at each location.
@@ -46,7 +46,7 @@ Query the ITDK for all routers inferred to be operated by China Unicom, count ro
 
 ## Task 3: Multi-AS Interconnection Analysis
 
-Query the ITDK for all router-level links between any pair of 18 major autonomous systems spanning Tier-1 transit, large ISPs, content providers, and CDNs. Visualize the results as a heatmap and interpret the structural patterns you observe.
+Query the ITDK for all router-level links between any pair of 18 major autonomous systems spanning ISPs, content providers, and CDNs. Visualize the results as a heatmap and interpret the structural patterns you observe.
 
 - [ ] Q3: Write two paragraphs explaining what you observe about the router-level interconnections between these 18 autonomous systems. Focus on structural patterns — which categories of AS appear most interconnected, and which appear least? What does this tell you about the economics and architecture of the Internet?
 

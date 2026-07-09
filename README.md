@@ -6,7 +6,7 @@ README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Da
 
 ## Learning Objectives
 
-In this module you will use CAIDA's Internet Topology Data Kit (ITDK) to explore router-level Internet topology. You will query a PostgreSQL database of traceroute-inferred links between routers, use their geolocation, ASN, and hostname annotations to locate and attribute each router, and analyze how major autonomous systems interconnect. By the end of this module you should understand how Tier-1 transit providers, large ISPs, CDNs, and content networks interconnect at the router level, and be able to judge when a router's inferred geolocation is trustworthy.
+In this module you will use CAIDA's Internet Topology Data Kit (ITDK) to explore router-level Internet topology. You will query a PostgreSQL database of traceroute-inferred links between routers, use their geolocation, ASN, and hostname annotations to locate and attribute each router, and analyze how major autonomous systems interconnect. By the end of this module you should understand how ISPs, CDNs, and content networks interconnect at the router level, and be able to judge when a router's inferred geolocation is trustworthy.
 
 ## Overview
 
@@ -71,7 +71,7 @@ nids-itdk
 - **Maxmind**: An IP-geolocation database that infers location from IP registry records; falls back to the organization's registered address when fine-grained data is unavailable.
 - **Stale Hostname**: A DNS PTR record that was accurate when assigned but no longer reflects the router's current physical location.
 - **Haversine Distance**: The great-circle distance between two lat/lon points on Earth's surface, used here to measure the physical separation between router endpoints on a link.
-- **Tier-1 Transit**: An AS that provides transit to other ASes without purchasing upstream transit itself, because it has settlement-free peering agreements with all other Tier-1s.
+- **ISP (Internet Service Provider)**: An AS that sells transit and access — carrying traffic for other networks and its own customers. The largest reach the entire Internet through settlement-free peering with each other and never purchase upstream transit themselves.
 - **Peering**: A bilateral agreement between two ASes to exchange traffic directly, rather than through a third-party transit provider.
 - **CDN (Content Delivery Network)**: A network of servers distributed geographically to serve content closer to end users; examples include Akamai, Cloudflare, and Edgecast.
 - **Placeholder Node**: An ITDK node representing a router that did not respond to traceroute probes but whose existence was inferred from surrounding hops. Placeholder nodes have synthetic IP addresses in reserved ranges and carry no geolocation, AS, or hostname data.

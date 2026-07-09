@@ -117,6 +117,6 @@ Question 1 asks for three short answers (Q1.a–c). Ground each in what your own
 
 - **Q1.a** — How many distinct metropolitan areas do Level3 and Netflix peer at, and how is that count distributed across cities? Is it concentrated in a few hubs or spread broadly?
 - **Q1.b** — What does it mean when the same city has more than one link? Think about what a "link" represents at the router level versus what a single peering agreement or facility represents.
-- **Q1.c** — Why would a Tier-1 transit provider and a large content provider prefer to peer at the same physical location (adjacent) rather than across a long distance? What would explain the links that come out non-adjacent — are they likely genuine long-haul circuits, or could some be geolocation error given the caveat above?
+- **Q1.c** — Why would an ISP and a large content provider prefer to peer at the same physical location (adjacent) rather than across a long distance? What would explain the links that come out non-adjacent — are they likely genuine long-haul circuits, or could some be geolocation error given the caveat above?
 
 [README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | Task 1 ⮕ | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)

@@ -6,18 +6,18 @@
 
 | ASN   | Name             | Code | Category       |
 | ----- | ---------------- | ---- | -------------- |
-| 174   | Cogent           | T    | Tier-1 transit |
-| 701   | Verizon          | T    | Tier-1 transit |
-| 1299  | Arelion          | T    | Tier-1 transit |
-| 3257  | GTT              | T    | Tier-1 transit |
-| 3491  | PCCW             | T    | Tier-1 transit |
-| 5511  | Orange           | T    | Tier-1 transit |
-| 6453  | TATA             | T    | Tier-1 transit |
-| 3320  | Deutsche Telekom | L    | Large ISP      |
-| 6461  | Zayo             | L    | Large ISP      |
-| 6762  | Telecom Italia   | L    | Large ISP      |
-| 6830  | Liberty Global   | L    | Large ISP      |
-| 12956 | Telefonica       | L    | Large ISP      |
+| 174   | Cogent           | I    | ISP            |
+| 701   | Verizon          | I    | ISP            |
+| 1299  | Arelion          | I    | ISP            |
+| 3257  | GTT              | I    | ISP            |
+| 3491  | PCCW             | I    | ISP            |
+| 5511  | Orange           | I    | ISP            |
+| 6453  | TATA             | I    | ISP            |
+| 3320  | Deutsche Telekom | I    | ISP            |
+| 6461  | Zayo             | I    | ISP            |
+| 6762  | Telecom Italia   | I    | ISP            |
+| 6830  | Liberty Global   | I    | ISP            |
+| 12956 | Telefonica       | I    | ISP            |
 | 15133 | Edgecast         | D    | CDN            |
 | 20940 | Akamai           | D    | CDN            |
 | 714   | Apple            | C    | Content        |
@@ -41,7 +41,7 @@ where `W[i,j]` is the router-level link count between AS `i` and AS `j`. In word
 
 The default single solver run (barycenter start) can land in a mediocre local optimum, so the notebook restarts 30 times from randomized starting permutations and keeps the lowest-objective (best-clustering) result, using a fixed RNG seed for reproducibility. Print `best.fun` and the resulting AS order so you can see how the axis was reordered.
 
-Because the QAP reordering breaks the category grouping (a Tier-1 transit AS can end up next to a CDN if the two are heavily linked), the heatmap adds a one-letter `Code` strip (T/L/D/C, from the table above) along the top axis so each column's category is still identifiable after reordering.
+Because the QAP reordering breaks the category grouping (an ISP can end up next to a CDN if the two are heavily linked), the heatmap adds a one-letter `Code` strip (I/D/C, from the table above) along the top axis so each column's category is still identifiable after reordering.
 
 ## Counting Links Between Every AS Pair
 
@@ -107,8 +107,8 @@ To sanity-check the matrix before plotting, sort `pair_df` by `link_count` desce
 
 Question 3 asks for **two paragraphs** interpreting the heatmap. Use the QAP ordering and the category-code strip to reason about structure rather than describing individual cells. Things to consider:
 
-- Which categories (T / L / D / C) cluster together into dense blocks, and which categories stay sparse or isolated?
-- Do the most heavily-interconnected ASes line up with the roles described in [Background](Background.md) (Tier-1 transit, large ISP, CDN, content)? Where does a multi-service AS complicate the clean category label?
+- Which categories (I / D / C) cluster together into dense blocks, and which categories stay sparse or isolated?
+- Do the most heavily-interconnected ASes line up with the roles described in [Background](Background.md) (ISP, CDN, content)? Where does a multi-service AS complicate the clean category label?
 - What does the pattern you see imply about the economics and architecture of the Internet — who needs to interconnect densely, and who does not?
 
 Ground each claim in what the heatmap actually shows for your run, not in these prompts.
