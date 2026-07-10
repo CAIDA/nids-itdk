@@ -84,7 +84,7 @@ pair_df["name2"] = pair_df["asn2"].map(ASES)
 
 ## Building the Symmetric Matrix
 
-The query above counts distinct `link_id` values for each AS pair (with `asn1 < asn2` to avoid double-counting). After running the query, build a symmetric matrix — indexed by the QAP order, not the table order — and mask zeros so the heatmap shows only pairs with at least one observed link:
+The query above counts distinct `link_id` values for each AS pair (with `a.asn < b.asn` to avoid double-counting). After running the query, build a symmetric matrix — indexed by the QAP order, not the table order — and mask zeros so the heatmap shows only pairs with at least one observed link:
 
 ```python
 matrix = pd.DataFrame(0, index=qap_names, columns=qap_names)

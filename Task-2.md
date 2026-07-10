@@ -4,7 +4,7 @@
 
 ## Country-Wide Comparison: China Unicom vs. Level3
 
-Before narrowing to the US West Coast, look at China Unicom's (AS4837) router footprint globally, and compare it against Level3 (AS3356). Group geolocated nodes by `country` for both ASNs in one query, then rank each ASN's countries by router count. Rank is defined as the number of countries with strictly more routers (ties share a rank):
+Before narrowing to the US West Coast, look at China Unicom's (AS4837) router footprint globally, and compare it against Level3 (AS3356). Group geolocated nodes by `country` for both ASNs in one query, then rank each ASN's countries by router count. Rank is defined as the number of countries with more routers (ties share a rank):
 
 | country | number_router | rank |
 |:---:|---:|---:|

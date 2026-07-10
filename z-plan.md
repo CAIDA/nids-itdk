@@ -1,5 +1,6 @@
 <goal>
-Replace the SQL in code with a student guide modeled on model.
+The ../nids-itdk-key/nids-itdk-key.ipynb has changed. We need to do a review of 
+all the markdown files and the notebook to make sure they agree with the key, the source of truth. 
 </goal>
 
 <model>
@@ -27,32 +28,10 @@ country_counts = pd.read_sql("""
 """, engine)
 </model>
 
-<code>
-# Count router-level links between each pair of the 18 ASes.
-# The Python glue is provided; fill in the SQL body. The full, commented query
-# is in Task-3.md, and SQL.md explains the DISTINCT-then-self-join pattern and
-# the IN (...) interpolation.
-asn_sql = ", ".join(str(a) for a in asn_list)   # "174, 701, 1299, ..." for IN (...)
-pair_df = pd.read_sql(f"""
-    --- student_code_start -----------------------------
-    --- YOUR CODE HERE
-    --- Build pair_df with columns asn1, asn2, link_count (one row per connected
-    --- AS pair among the 18 in asn_list):
-    ---   1. CTE le_as: SELECT DISTINCT link_id, asn from itdk_link_endpoints
-    ---      JOIN itdk_node_as, filtered with asn IN (asn_sql). Collapse the
-    ---      grain with DISTINCT before self-joining, or the query fans out.
-    ---   2. Self-join le_as on link_id with asn1 < asn2 (each unordered pair
-    ---      once), GROUP BY the pair, COUNT(*) AS link_count, ORDER BY it DESC.
-    --- Interpolate asn_sql into the IN (...) clause via this f-string. See
-    --- Task-3.md / SQL.md.
-    --- student_code_end ----------------------------------------
-""", engine)
-
-pair_df["name1"] = pair_df["asn1"].map(ASES)
-pair_df["name2"] = pair_df["asn2"].map(ASES)
-
-print(f"AS pairs with at least one router-level link: {len(pair_df)}")
-print()
-print("Top 20 pairs by link count:")
-print(pair_df[["name1", "name2", "link_count"]].head(20).to_string(index=False))
-</code> 
+<instructions> 
+Review the source of truth ../nids-itdk-key/nids-itdk-key.ipynb
+Review the CVS files caida_itdk_csv/* for information on the table sizes.
+Review current module *.md and nids-itdk.ipynb
+Identify what needs to be fixed to bring the student version in align with the key.
+Don't assume, ask questions. 
+</instructions>

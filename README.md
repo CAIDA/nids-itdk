@@ -19,7 +19,7 @@ Start by reading **Introduction** to get the background needed for the assignmen
 - step 5 set up your local Python environment (see "Running Locally" below)
 - step 6 launch Jupyter and complete nids-itdk.ipynb
   - complete each task by replacing the `# YOUR CODE HERE` sections
-  - answer all eight questions
+  - answer all seven questions
 - step 7 save the notebook, commit, and push to github
 
 ### Running Locally

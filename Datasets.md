@@ -5,6 +5,8 @@
 This module uses a PostgreSQL database containing a relational representation of the 2026 ITDK. All tables live in the `caida_itdk` schema.
 We focus for this study only on nodes that transited a packet in at least one traceroute. These are known routers, and restricting to them decreases the size of the database and should allow for faster development.
 
+#### Tables
+
 | Table                   | Size      | Description                                               |
 | ----------------------- | --------- | --------------------------------------------------------- |
 | `itdk_router_hostnames` | 414.45 MB | DNS PTR hostnames for interface IPs                       |
@@ -12,6 +14,20 @@ We focus for this study only on nodes that transited a packet in at least one tr
 | `itdk_node_as`          | 391.16 MB | Router node → operating autonomous system                 |
 | `itdk_node_geolocation` | 518.91 MB | Router node → physical location                           |
 | `itdk_link_endpoints`   | 1.5 GB    | Inferred links → their endpoint nodes                     |
+
+#### Indexes
+
+Which columns are indexed on each table, so you can pick a `WHERE`/`JOIN` column that avoids a full-table scan. `PK` = primary-key column, `IX` = secondary index, `PK·IX` = both.
+
+| Table                     | Rows | node_id | link_id | endpoint_ordinal | asn   | country | longitude | ip | hostname |
+| ------------------------- | ---- | ------- | ------- | ---------------- | ----- | ------- | --------- | -- | -------- |
+| `itdk_link_endpoints`     | 14M  | IX      | PK      | PK               |       |         |           |    |          |
+| `itdk_node_as`            | 4M   | PK      |         |                  | PK·IX |         |           |    |          |
+| `itdk_node_geolocation`   | 4M   | PK      |         |                  |       | IX      | IX        |    |          |
+| `v_itdk_ifaces_transit`   | 3M   | IX      | IX      |                  |       |         |           |    |          |
+| `itdk_router_hostnames`   | 2M   |         |         |                  |       |         |           | PK | PK·IX    |
+
+Composite indexes only match left-to-right (see [Writing Efficient Queries](#writing-efficient-queries)): the leading column is listed first in the key above — `link_id` for `itdk_link_endpoints`, `node_id` for `itdk_node_as`, `country` for the geolocation index, `ip` for `itdk_router_hostnames`.
 
 ### Writing Efficient Queries
 
