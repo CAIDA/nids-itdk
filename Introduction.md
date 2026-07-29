@@ -1,5 +1,10 @@
 [README](README.md) | Introduction ⮕ | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
+### Prerequisite NIDS Assignments
+
+- [How the Internet assigns and uses Autonomous Systems (ASes)](https://github.com/CAIDA/nids-asn-introduction)
+- [Understanding the BGP Control Plane](https://github.com/CAIDA/nids-bgp-control-plane)
+
 ## What Is the Internet Topology Data Kit?
 
 The Internet Topology Data Kit (ITDK) is a dataset produced by CAIDA from large-scale traceroute measurement campaigns. Each campaign sends probes toward millions of destination IP addresses from dozens of vantage points distributed across the Internet. As each probe travels from source to destination, intermediate routers reveal themselves by sending ICMP TTL-exceeded messages — the basis of the classic `traceroute` tool.
