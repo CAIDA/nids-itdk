@@ -8,6 +8,11 @@ README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Da
 
 In this module you will use CAIDA's Internet Topology Data Kit (ITDK) to explore router-level Internet topology. You will query a PostgreSQL database of traceroute-inferred links between routers, use their geolocation, ASN, and hostname annotations to locate and attribute each router, and analyze how major autonomous systems interconnect. By the end of this module you should understand how ISPs, CDNs, and content networks interconnect at the router level, and be able to judge when a router's inferred geolocation is trustworthy.
 
+## Slides
+
+- [ETP week 04 lecture](slides/ETP-Week-04-ITDK.pptx)
+- [ETP week 04 assignment](slides/ETP-Week-04-ITDK_Assignment.pptx)
+
 ## Overview
 
 Start by reading **Introduction** to get the background needed for the assignment. **Background** introduces the three autonomous systems (Level3, Netflix, China Unicom) examined throughout the module. **Datasets** explains the database schema and the role of placeholder nodes.
