@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | Task 3 Guide ⮕ | [Notebook](nids-itdk.ipynb)
 
 # Task 3: Multi-AS Interconnection Analysis — How-To Guide
 
@@ -113,4 +113,4 @@ Question 3 asks for **two paragraphs** interpreting the heatmap. Use the QAP ord
 
 Ground each claim in what the heatmap actually shows for your run, not in these prompts.
 
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | Task 3 ⮕ | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | Task 3 Guide ⮕ | [Notebook](nids-itdk.ipynb)

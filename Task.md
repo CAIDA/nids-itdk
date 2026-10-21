@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | Tasks ⮕ | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | Tasks ⮕ | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 # Tasks
 
@@ -50,4 +50,4 @@ Query the ITDK for all router-level links between any pair of 18 major autonomou
 
 - [ ] Q3: Write two paragraphs explaining what you observe about the router-level interconnections between these 18 autonomous systems. Focus on structural patterns — which categories of AS appear most interconnected, and which appear least? What does this tell you about the economics and architecture of the Internet?
 
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | Tasks ⮕ | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | Tasks ⮕ | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)

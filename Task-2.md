@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | Task 2 ⮕ | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | Task 2 Guide ⮕ | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 # Task 2: China Unicom — How-To Guide
 
@@ -134,4 +134,4 @@ Ground each answer in what your own queries actually return, not in the illustra
 - **Q2.c** — Build the top-10 West Coast cities × peer-ASN table (see *Top West Coast Cities by Peer AS* above): for each city, the total number of distinct China Unicom routers with at least one peer, broken down by peer ASN. Label peer ASNs by network name rather than bare numbers, and note how many columns (if any) you collapsed for readability.
 - **Q2.d** — Looking at your West Coast city/peer-ASN table: why would China Unicom connect to the *same* peer AS more than once *at the same location*? Why would it connect to the same peer AS at *different* locations? Consider what a single router-level link represents versus what a citywide or national interconnection relationship represents.
 
-[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | Task 2 ⮕ | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | Task 2 Guide ⮕ | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)

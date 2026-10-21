@@ -1,4 +1,4 @@
-[README](README.md) | [Introduction](Introduction.md) | Background ⮕ | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | Background ⮕ | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
 ## Background
 
@@ -56,4 +56,4 @@ The largest ASes often break that pattern. At sufficient scale, a single AS can 
 
 Tasks 1–2 each isolate a pairwise relationship (Level3–Netflix, China Unicom's country-wide and West Coast peers) so you can see one of these business models play out directly in the data. Task 3 broadens the lens across the 18 ASes above — watch for multi-service ASes complicating the clean categories, and for the differences between ISPs, content providers, and CDNs appearing as visible structure in the interconnection heatmap, rather than as something you have to take on faith from this background reading.
 
-[README](README.md) | [Introduction](Introduction.md) | Background ⮕ | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1](Task-1.md) | [Task 2](Task-2.md) | [Task 3](Task-3.md) | [Notebook](nids-itdk.ipynb)
+[README](README.md) | [Introduction](Introduction.md) | Background ⮕ | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)
