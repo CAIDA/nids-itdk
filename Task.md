@@ -29,7 +29,7 @@ Complete the tasks below in order. All three tasks are completed inside [nids-it
 
 ## Task 1: Border Routers Between Level3 (AS3356) and Netflix (AS2906)
 
-Query the ITDK for all router-level links between Level3, an ISP, and Netflix, a major content provider. Use geolocation to measure the distance between link endpoints, classify links as geographically adjacent (≤ 40 km) or not, and identify the distinct cities where the two networks peer. Read the [Task 1 Guide](Task-1.md) for additional Guidance.
+Query the ITDK for all router-level links between Level3, an ISP, and Netflix, a major content provider. Use geolocation to measure the distance between link endpoints, classify links as geographically adjacent (≤ 40 km) or not, and identify the distinct cities where the two networks peer. Read the [Task 1 Guide](Task-1.md) for additional guidance.
 
 - [ ] Q1.a: How many router-level links between Level3 and Netflix are geographically adjacent (within 40 km)? How many are not? Report the link IDs of the non-adjacent links.
 - [ ] Q1.b: Excluding non-adjacent links, how many distinct locations did Level3 and Netflix appear to peer? Produce a table with the inferred locations and the number of links at each location.
@@ -37,7 +37,7 @@ Query the ITDK for all router-level links between Level3, an ISP, and Netflix, a
 
 ## Task 2: Routers Operated by China Unicom (AS4837)
 
-Query the ITDK for all routers inferred to be operated by China Unicom, count routers per country, and compare that country distribution against Level3. Then, for the subset of China Unicom routers geolocated on the US West Coast, identify the peer autonomous systems that connect to them at the router level, using both AS assignment data. Read the [Task 2 Guide](Task-2.md) for additional Guidance.
+Query the ITDK for all routers inferred to be operated by China Unicom, count routers per country, and compare that country distribution against Level3. Then, for the subset of China Unicom routers geolocated on the US West Coast, identify the peer autonomous systems that connect to them at the router level, using both AS assignment data. Read the [Task 2 Guide](Task-2.md) for additional guidance.
 
 - [ ] Q2.a: How does the concentration of China Unicom routers compare with those of Level3? What explains these differences?
 - [ ] Q2.b: Which has more routers? Why might that be the case?
@@ -46,7 +46,7 @@ Query the ITDK for all routers inferred to be operated by China Unicom, count ro
 
 ## Task 3: Multi-AS Interconnection Analysis
 
-Query the ITDK for all router-level links between any pair of 18 major autonomous systems spanning ISPs, content providers, and CDNs. Visualize the results as a heatmap and interpret the structural patterns you observe. Read the [Task 3 Guide](Task-3.md) for additional Guidance.
+Query the ITDK for all router-level links between any pair of 18 major autonomous systems spanning ISPs, content providers, and CDNs. Visualize the results as a heatmap and interpret the structural patterns you observe. Read the [Task 3 Guide](Task-3.md) for additional guidance.
 
 - [ ] Q3: Write two paragraphs explaining what you observe about the router-level interconnections between these 18 autonomous systems. Focus on structural patterns — which categories of AS appear most interconnected, and which appear least? What does this tell you about the economics and architecture of the Internet?
 
