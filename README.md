@@ -1,5 +1,8 @@
 README ⮕ | [Introduction](Introduction.md) | [Background](Background.md) | [Datasets](Datasets.md) | [SQL](SQL.md) | [Tasks](Task.md) | [Task 1 Guide](Task-1.md) | [Task 2 Guide](Task-2.md) | [Task 3 Guide](Task-3.md) | [Notebook](nids-itdk.ipynb)
 
+### [Network Infrastructure Data Science (NIDS) Assignment](https://www.caida.org/projects/nids/)
+---
+
 # Exploring Internet Topology with CAIDA's ITDK
 
 **GitHub:** https://github.com/CAIDA/nids-itdk
